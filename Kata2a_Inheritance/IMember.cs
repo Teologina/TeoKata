@@ -16,4 +16,11 @@ namespace Kata2a_Inheritance
 
         public void RandomInit();
     }
+
+    interface IRadissonMember : IMember
+    {
+    }
+    interface IHiltonMember : IMember
+    {
+    }
 }

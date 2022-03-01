@@ -13,7 +13,9 @@ namespace Kata2a_Inheritance
         public MemberLevel Level { get; set; }
         public DateTime Since { get; set; }
 
-        public override string ToString() => $"{FirstName} {LastName} is a {Level} member since {Since.Year}";
+        public virtual string[] Benefits { get; set; } = { "Member Benefit" };
+
+        public override string ToString() => $"{GetType().Name}: {FirstName} {LastName} is a {Level} member since {Since.Year}\n  Benefits: {string.Join(", ", Benefits)}";
 
         #region Implement IComparable
         public int CompareTo(IMember other)

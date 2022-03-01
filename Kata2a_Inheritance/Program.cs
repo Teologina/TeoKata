@@ -7,19 +7,12 @@ Console.WriteLine($"member1: {member1}");
 var member2 = Member.Factory.CreateWithRandomData();
 Console.WriteLine($"member2: {member2}");
 
-Console.WriteLine("\nCreate a 20 Hilton members");
-var HiltonMembers = MemberList.Factory.CreateWithRandomData(20); 
-HiltonMembers.Sort();
-Console.WriteLine(HiltonMembers);
+IMember myRadisson1 = new RadissonMember();
+IMember myRadisson2 = RadissonMember.Factory.CreateWithRandomData();
 
-Console.WriteLine("\nCreate a 20 Radisson members");
-var RadissonMembers = MemberList.Factory.CreateWithRandomData(20);
-RadissonMembers.Sort();
-Console.WriteLine(RadissonMembers);
+Console.WriteLine(myRadisson1);
+Console.WriteLine(myRadisson2);
 
-Console.WriteLine($"\nHilton member[0]: {HiltonMembers[0]}");
-Console.WriteLine($"Radisson member[0]: {RadissonMembers[0]}");
-Console.WriteLine();
 #endregion
 
 #region For Exercise: Refresh how to generate random initialization data

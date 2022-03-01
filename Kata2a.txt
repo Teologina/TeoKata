@@ -53,7 +53,7 @@ Nu har du en kopia av "InheritanceRefracture" på GitHub
 	+ Om du vill kan du nu lägga in olika benefit beroende på vilken Level som Member är initierad till
 	Gör en lokal commit
 
-15.	Kopiera class factory från Member till RadissonMember och ändra så att en instans av RadissonMember skapas istf Member
+15.	Flytta class factory från Member till RadissonMember och ändra så att en instans av RadissonMember skapas istf Member
 	Ändra i Main() så att det skapas en RadissonMedlem
 	Kompilera och kör programmet
 	Gör en lokal commit som du kallar "RadissonMember class implemented"
