@@ -13,32 +13,47 @@ relevant men slumpmässig data genom att skapa en class Factory.
 	- Tänk på att deklarera enum typen MemberLevel i samma fil som IMember då de hör tillsammans
 
 2. Skriv definitionen av IMember så att IMember också måste implementera IEquitable<> och IComparable<>
+
 3. Implementera IMember i en klass Member
 	- Implementera IComparable så att medlemmar sorteras efter bonusnivå, efternamn, förnamn, medlemsdatum
 	- Implementera RandomInit()
-	- Implementera en constructor som skapar en instans initierad med slumpmässiga värden
+	- Implementera en constructor som skapar tom instans
 	- Override ToString() för att skriva ut medlemsdata
 	- Implementera IEquitable<>
 		- Kom ihåg legacy: override bool Equals(object obj) => Equals(obj as IMember);
 		- override int GetHashCode() =>
 
-4. Skriv några kodrader i Program.Main() som testar att skapa instanser av Member.
+4. Deklarera en class factory i Member som skapar en tom instans, initierar den med random data
+	- I Member deklarera en public static class Factory
+	- I Factory deklarera en internal static IMember CreateWithRandomData() som
+		- Skapar en instans av member
+		- Anropar RandomInit() på just den instansen
+		- Returnerar den nyskapade och ifyllda instansen
+		
+5. Skriv några kodrader i Program.Main() som testar att skapa instanser av Member.
 	- Använda IMember som typ så länge det går.
 
-5. Deklarara ett Interface IMemberList som definierar
+6. Deklarara ett Interface IMemberList som definierar
 	- Metod, Count, som returnerar totala antalet medlemmar
 	- Metod, Count(int year), som returnerar totala antalet medlemmar skapade under året "year"
 	- Metod, Sort
 
-6. Implementera IMemberList i en class, MemberList
+7. Implementera IMemberList i en class, MemberList
 	- Förutom när du skapar en instans av Member, använd typen IMember
-	- En constructor(int NrOfMembers), som skapar en lista med NrOfMembers slumpmässigt initierade Members
+	- En tom constructor
 	- Override ToString() för att skriva ut kluster om 10 medlemmar 
 
-7. Skriv några kodrader i Program.Main() som skapar en sorterad medlemslista för Hilton med 20 medlemmar
+8. Deklarera en class factory i MemberList som skapar en tom instans med NrOfMembers, och initierar den med random data
+	- I MemberList deklarera en public static class Factory
+	- I Factory deklarera en internal static IMember CreateWithRandomData(int NrOfMembers) som
+		- Skapar en instans av MemberList med NrOfMembers medlemmar
+		- I en Loop skapar och lägger till members genom att köra Member.Factory.CreateWithRandomData()
+		- Returnerar den nyskapade och ifyllda instansen av MemberList
+
+9. Skriv några kodrader i Program.Main() som skapar en sorterad medlemslista för Hilton med 20 medlemmar
    och en för Radisson med 20 medlemmar
 
-8. Lägg till en class indexer property så att man kan läsa en enskild medlem i listan och ändra i koden i Main()
+10. Lägg till en class indexer property så att man kan läsa en enskild medlem i listan och ändra i koden i Main()
    så att du skriver ut en Medlem från index 0 i Radisson och Hilton listan 
 
 
