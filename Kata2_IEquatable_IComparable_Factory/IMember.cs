@@ -18,10 +18,5 @@ namespace Kata2_IEquatable_IComparable_Factory
         public void RandomInit();
     }
 
-    interface IRadissonMember : IMember
-    {
-    }
-    interface IHiltonMember : IMember
-    {
-    }
+ 
 }
