@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kata2_IEquatable_IComparable_Factory
+namespace Kata2_Inheritance
 {
     class Member : IMember
     {

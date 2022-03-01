@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Kata2_IEquatable_IComparable_Factory
+namespace Kata2_Inheritance
 {
     class MemberList : IMemberList
     {
