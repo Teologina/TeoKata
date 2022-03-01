@@ -2,10 +2,16 @@
 
 #region Kata test of Member and MemberList
 Console.WriteLine("Create a couple of members");
-var member1 = Member.Factory.CreateWithRandomData();
+var member1 = RadissonMember.Factory.CreateWithRandomData();
 Console.WriteLine($"member1: {member1}");
-var member2 = Member.Factory.CreateWithRandomData();
+var member2 = RadissonMember.Factory.CreateWithRandomData();
 Console.WriteLine($"member2: {member2}");
+
+var member3 = HiltonMember.Factory.CreateWithRandomData();
+Console.WriteLine($"member 3: {member3}");
+
+var member4 = ScandicMember.Factory.CreateWithRandomData();
+Console.WriteLine($"member 4: {member4}");
 
 Console.WriteLine("\nCreate a 20 Hilton members");
 var HiltonMembers = MemberList.Factory.CreateWithRandomData(20); 
@@ -20,6 +26,11 @@ Console.WriteLine(RadissonMembers);
 Console.WriteLine($"\nHilton member[0]: {HiltonMembers[0]}");
 Console.WriteLine($"Radisson member[0]: {RadissonMembers[0]}");
 Console.WriteLine();
+
+Console.WriteLine("\nCreate 20 members. Every other is hilton/scandic");
+var members = MemberList.Factory.CreateWithRandomData(20);
+Console.WriteLine(members);
+
 #endregion
 
 #region For Exercise: Refresh how to generate random initialization data
