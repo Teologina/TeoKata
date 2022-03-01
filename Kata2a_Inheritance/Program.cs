@@ -14,6 +14,7 @@ IMember myScandic = ScandicMember.Factory.CreateWithRandomData();
 Console.WriteLine(myHilton);
 Console.WriteLine(myScandic);
 
+Console.WriteLine();
 var myList = MemberList.Factory.CreateWithRandomData(20);
 Console.WriteLine(myList);  
 
