@@ -1,8 +1,6 @@
 ﻿using Kata2_Inheritance;
 
 #region Kata test of Member and MemberList
-Console.WriteLine("This is a test of git revert");
-
 Console.WriteLine("Create a couple of members");
 var member1 = RadissonMember.Factory.CreateWithRandomData();
 Console.WriteLine($"member1: {member1}");
