@@ -46,20 +46,5 @@ namespace Kata2_Inheritance
             {
                 var memberlist = new MemberList();
                 for (int i = 0; i < NrOfItems; i++)
-                {
-                    if (i % 2 == 0)
-                    {
-                        memberlist._members.Add(HiltonMember.Factory.CreateWithRandomData());
-                    }
-                    else
-                        memberlist._members.Add(ScandicMember.Factory.CreateWithRandomData());
-
-                }
-                return memberlist;
-            }
-        }
-        #endregion
-
-        public MemberList() { }
-    }
+  
 }
