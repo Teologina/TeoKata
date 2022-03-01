@@ -3,12 +3,16 @@ Kata2a
 Bygger vidare på Kata2 och övar arv, polymorfism och till sist immutability.
 Vi ska också öva lite mer avancerad Git; git commit, git squash, git revert, git reset, git branch, git checkout, git push, git fetch, git pull, git merge, git cherrypick, git ammend
 
-1. Kopiera koden från Kata2, kompilera och kör så att du har en stadig startpunkt.
+1. Skapa ett ny projekt som heter "Kata2a_Inheritance". Kopiera koden från Kata2, kompilera och kör så att du har en stadig startpunkt.
 2. Skapa en ny Git repository lokalt och på Github
-3. Ändra namespace i alla filer till "Kata2a_Inheritance"
-4. Gör en git commit och push som du namnger "namespace changed". Nu har du en körbar startpunkt
+3. Ändra namespace i alla filer i projektet "Kata2a_Inheritance" till "Kata2a_Inheritance"
+4. Gör en git commit och push som du namnger "namespace changed". 
 
-5. Skapa en git branch som du kallar "InheritanceRefracture". Gör git checkout till din nya branch
+Nu har du en körbar startpunkt
+------------------------------
+
+5. Skapa en git branch som du kallar "InheritanceRefracture". Gör git checkout till din nya branch. 
+   Nu kan du arbete med kodändringar i "InheritanceRefracture" utan att det påverkar koden i "master"
 
 6. Lägg till propertin property string[] Benefits i IMember
 	Gör en git commit utan push
@@ -21,6 +25,9 @@ Vi ska också öva lite mer avancerad Git; git commit, git squash, git revert, git
 
 9. Välj alla lokala git commits och gör en git squash. Du har nu fått en commit av allt interface byggande
 	Gör en push och jämför din lokala repo med din github repo
+
+Nu har du en kopia av "InheritanceRefracture" på GitHub
+-------------------------------------------------------
 
 10. Gör git checkout till master branch och se urspungskoden helt oförändrad. Kör ursprungskoden.
 	Gör git checkout till InheritanceRefracture för att at dig tillbaka till rätt kodbranch
@@ -45,21 +52,29 @@ Vi ska också öva lite mer avancerad Git; git commit, git squash, git revert, git
 	+ lägg till kod i RandomInit() för att initiera Radisson member benefits unikt för Radisson. 
 	+ Om du vill kan du nu lägga in olika benefit beroende på vilken Level som Member är initierad till
 	Gör en lokal commit
-	
-15.	Flytta class factory från Member till RadissonMember
-	Skapa en class Factory i RadissonMember som initierar instansen
+
+15.	Kopiera class factory från Member till RadissonMember och ändra så att en instans av RadissonMember skapas istf Member
 	Ändra i Main() så att det skapas en RadissonMedlem
 	Kompilera och kör programmet
 	Gör en lokal commit som du kallar "RadissonMember class implemented"
 
-16. Repetera punkterna 13 - 15 och skapa en HiltonMember class
+Nu har du en körbar kod i "InheritanceRefracture". Du har även körbar kod i "master", men det är ju urspundskoden från steg 4.
+Prova med att byta branch och köra.
+-----------------------------------
+
+
+16. Gå tillbaka till branch "InheritanceRefracture"
+	Repetera punkterna 13 - 15 och skapa en HiltonMember class
 	Gör en lokal commit som du kallar "HiltonMember clas implemented"
 
 17. Repetera punkterna 13 - 15 och skapa en ScandicMember class
 	Gör en lokal commit som du kallar "ScandicMember clas implemented"
 
 18.	Ångra ScandicMember commit genom att välja commit "HiltonMember class implemented" och gör git reset -mixed. 
-	Du har nu spolat tillbaka koden med alla ändringar som gjordes sedan "HiltonMember class implemented" finns i Git Changes. Du kan välja vad du vill radera.
+	
+Du har nu spolat tillbaka koden med alla ändringar som gjordes sedan "HiltonMember class implemented" finns i Git Changes. 
+Du kan välja vad du vill radera.
+----------------------------------------------------------------------------
 
 19. Ändra i MemberList.CreateWithRandomData() så att varannan Member i listan är Radisson och varannan Hilton.
 
@@ -72,6 +87,8 @@ Vi ska också öva lite mer avancerad Git; git commit, git squash, git revert, git
 	Ändra namned på din local commit med git ammend
 	Gör git push till remote repo
 
+Nu har du ny körbar kod i branch "InheritanceRefracture"
+--------------------------------------------------------
 22. Gör git checkout till master branch och se urspungskoden helt oförändrad. Kör ursprungskoden.
 	Gör git checkout till InheritanceRefracture för att se din modifierade kod. Kör den modifierade koden.
 
@@ -84,6 +101,8 @@ Vi ska också öva lite mer avancerad Git; git commit, git squash, git revert, git
 	Resolve any conflicts
 	Undersök och förstå innehållet i staged changes.
 	Commit staged changes.
-	Voila!! - du har nu integrerat InheritanceRefracture i din master brach
+
+Voila!! - du har nu integrerat InheritanceRefracture i din master brach
+-----------------------------------------------------------------------
 
 25. Om du vill: Hitta något tidigare commit och hämta någon kod med git cherrypick 

@@ -2,8 +2,11 @@
 
 #region Kata test of Member and MemberList
 
-var myRadisson = new RadissonMember();
-Console.WriteLine(myRadisson);
+var myRadisson1 = new RadissonMember();
+var myRadisson2 = RadissonMember.Factory.CreateWithRandomData();
+
+Console.WriteLine(myRadisson1);
+Console.WriteLine(myRadisson2);
 
 #endregion
 

@@ -20,5 +20,18 @@ namespace Kata2a_Inheritance
         {
             RandomInit();
         }
+
+        #region Class Factory for creating an instance filled with Random data
+        internal new static class Factory
+        {
+            internal static IMember CreateWithRandomData()
+            {
+                var member = new RadissonMember();
+                member.RandomInit();
+                return member;
+            }
+        }
+        #endregion
+
     }
 }

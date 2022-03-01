@@ -5,7 +5,6 @@ representerar en medlem (Member) och en lista på medlemmar (MemberList)
 Du ska också implementera relevanta Interfaces och IEquatable<Member> and IComparable <Member>, samt initiera en instans av Member med 
 relevant men slumpmässig data genom att skapa en class Factory.
 
-
 1. Deklarera ett Interface IMember som definierar
 	- Medlemmens för- och efternamn (property get; set;)
 	- Medlemmens bonus nivå som en enum typ, MemberLevel: Blue, Silver, Gold and Platinum (property get; set;)
