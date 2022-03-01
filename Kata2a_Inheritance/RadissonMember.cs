@@ -8,6 +8,7 @@ namespace Kata2a_Inheritance
 {
     internal class RadissonMember :Member, IRadissonMember
     {
+        public override string[] Benefits { get; set; }
         public new void RandomInit()
         {
             base.RandomInit();

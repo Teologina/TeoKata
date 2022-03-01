@@ -13,7 +13,7 @@ namespace Kata2a_Inheritance
         public MemberLevel Level { get; set; }
         public DateTime Since { get; set; }
 
-        public virtual string[] Benefits { get; set; }
+        public virtual string[] Benefits { get; set; } = { "Member Benefit" };
 
         public override string ToString() => $"{GetType().Name}: {FirstName} {LastName} is a {Level} member since {Since.Year}\n  Benefits: {string.Join(", ", Benefits)}";
 
