@@ -8,6 +8,12 @@ IMember myRadisson2 = RadissonMember.Factory.CreateWithRandomData();
 Console.WriteLine(myRadisson1);
 Console.WriteLine(myRadisson2);
 
+Console.WriteLine();
+IMember myHilton = HiltonMember.Factory.CreateWithRandomData();
+IMember myScandic = ScandicMember.Factory.CreateWithRandomData();
+Console.WriteLine(myHilton);
+Console.WriteLine(myScandic);
+
 #endregion
 
 #region For Exercise: Refresh how to generate random initialization data
