@@ -14,6 +14,9 @@ IMember myScandic = ScandicMember.Factory.CreateWithRandomData();
 Console.WriteLine(myHilton);
 Console.WriteLine(myScandic);
 
+var myList = MemberList.Factory.CreateWithRandomData(20);
+Console.WriteLine(myList);  
+
 #endregion
 
 #region For Exercise: Refresh how to generate random initialization data
