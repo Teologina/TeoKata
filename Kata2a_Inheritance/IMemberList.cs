@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kata2_Inheritance
+namespace Kata2a_Inheritance
 {
     interface IMemberList
     {
@@ -32,7 +32,6 @@ namespace Kata2_Inheritance
         /// Sorts the dates in year, month, day order
         /// </summary>
         void Sort();
-        public string Write(string filename);
 
     }
 }

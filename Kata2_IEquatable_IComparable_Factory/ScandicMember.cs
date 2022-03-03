@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kata2_Inheritance
 {
-    internal class RadissonMember: Member, IRadissonMember
+    internal class ScandicMember: Member, IScandicMember
     {
         public override string[] Benefits { get; set; }
 
@@ -14,30 +14,30 @@ namespace Kata2_Inheritance
         {
             base.RandomInit();
 
-            Benefits = "R: Free Drinks, R: Free Parking, R: Free Roomservice, R: Late Checkout".Split(',');
+            Benefits = "S: Free Drinks, S: Free Parking, S: Free Roomservice, S: Late Checkout".Split(',');
 
             if (Level == MemberLevel.Platinum)
             {
-                Benefits = "R: Free Drinks".Split(',');
+                Benefits = "S: Free Drinks".Split(',');
             }
             if (Level == MemberLevel.Gold)
             {
-                Benefits = "R: Free Parking".Split(',');
+                Benefits = "S: Free Parking".Split(',');
             }
             if (Level == MemberLevel.Silver)
             {
-                Benefits = "R: Free Roomservice".Split(',');
+                Benefits = "S: Free Roomservice".Split(',');
             }
             if (Level == MemberLevel.Blue)
             {
-                Benefits = "R: Late Checkout".Split(',');
+                Benefits = "S: Late Checkout".Split(',');
             }
         }
         internal static class Factory
         {
             internal static IMember CreateWithRandomData()
             {
-                var member = new RadissonMember();
+                var member = new ScandicMember();
                 member.RandomInit();
                 return member;
             }
