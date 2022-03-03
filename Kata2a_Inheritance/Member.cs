@@ -4,19 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kata2_Inheritance
+namespace Kata2a_Inheritance
 {
-   abstract class Member : IMember
+    class Member : IMember
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public MemberLevel Level { get; set; }
         public DateTime Since { get; set; }
-        public virtual string[] Benefits { get; set ; }
 
-        public virtual string[] Benefits { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public virtual string[] Benefits { get; set; } = { "Member Benefit" };
 
-        public override string ToString() => $"Type: {GetType().Name} {FirstName} {LastName} is a {Level} member since {Since.Year}\n{string.Join(", ", Benefits)}";
+        public override string ToString() => $"{GetType().Name}: {FirstName} {LastName} is a {Level} member since {Since.Year}\n  Benefits: {string.Join(", ", Benefits)}";
 
         #region Implement IComparable
         public int CompareTo(IMember other)
@@ -70,7 +69,15 @@ namespace Kata2_Inheritance
         }
 
         #region Class Factory for creating an instance filled with Random data
-
+        internal static class Factory
+        {
+            internal static IMember CreateWithRandomData()
+            {
+                var member = new Member();
+                member.RandomInit();
+                return member;  
+            }
+        }
         #endregion
 
         public Member() { }
