@@ -15,7 +15,6 @@ namespace Kata2_Inheritance
         public DateTime Since { get; set; }
         public string[] Benefits { get; set; }
 
-        public string[] Benefits { get; set; }
         public void RandomInit();
     }
     interface IRadissonMember : IMember

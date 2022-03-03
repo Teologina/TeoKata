@@ -12,7 +12,6 @@ namespace Kata2_Inheritance
         public string LastName { get; set; }
         public MemberLevel Level { get; set; }
         public DateTime Since { get; set; }
-        public virtual string[] Benefits { get; set ; }
 
         public virtual string[] Benefits { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
