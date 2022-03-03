@@ -32,6 +32,7 @@ namespace Kata2_Inheritance
         /// Sorts the dates in year, month, day order
         /// </summary>
         void Sort();
+        public string Write(string filename);
 
     }
 }

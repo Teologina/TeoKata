@@ -14,12 +14,12 @@ var member4 = ScandicMember.Factory.CreateWithRandomData();
 Console.WriteLine($"member 4: {member4}");
 
 Console.WriteLine("\nCreate a 20 Hilton members");
-var HiltonMembers = MemberList.Factory.CreateWithRandomData(20); 
+var HiltonMembers = MemberList.Factory.CreateWithRandomData(20, "hilton"); 
 HiltonMembers.Sort();
 Console.WriteLine(HiltonMembers);
 
 Console.WriteLine("\nCreate a 20 Radisson members");
-var RadissonMembers = MemberList.Factory.CreateWithRandomData(20);
+var RadissonMembers = MemberList.Factory.CreateWithRandomData(20, "radisson");
 RadissonMembers.Sort();
 Console.WriteLine(RadissonMembers);
 
@@ -27,9 +27,17 @@ Console.WriteLine($"\nHilton member[0]: {HiltonMembers[0]}");
 Console.WriteLine($"Radisson member[0]: {RadissonMembers[0]}");
 Console.WriteLine();
 
-Console.WriteLine("\nCreate 20 members. Every other is hilton/scandic");
-var members = MemberList.Factory.CreateWithRandomData(20);
+Console.WriteLine("\nCreate 20 random members by entering a non valid hotel name");
+var members = MemberList.Factory.CreateWithRandomData(20,"ranasgsdg");
 Console.WriteLine(members);
+
+
+Console.WriteLine();
+Console.WriteLine();
+
+Console.WriteLine("Add a list of members to a textfile");
+var filename = members.Write("hotelguests.txt");
+Console.WriteLine($"20 members has been added to this path: {filename}");
 
 #endregion
 
